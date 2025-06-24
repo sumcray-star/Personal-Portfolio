@@ -165,22 +165,3 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// Initialize ClickSpark effects when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  if (typeof initClickSparks === 'function') {
-    initClickSparks();
-  }
-});
-
-// Also initialize if script loads after DOM
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof initClickSparks === 'function') {
-      initClickSparks();
-    }
-  });
-} else {
-  if (typeof initClickSparks === 'function') {
-    initClickSparks();
-  }
-}
