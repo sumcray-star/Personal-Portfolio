@@ -977,7 +977,7 @@ main {
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 8px;
   justify-content: center;
   padding: 25px;
 }
