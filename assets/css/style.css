@@ -95,7 +95,7 @@
   /**
    * shadow
    */
-
+  
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
@@ -1600,7 +1600,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: max-content;
     margin-left: auto;
   }
-
+  
 }
 
 
@@ -1710,7 +1710,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-
+  
 
 }
 
@@ -1837,21 +1837,4 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
-}
-/* Add tablet responsive design for skill cards and fix typo. */
-@media (min-width: 768px) {
-  /**
-   * RESUME
-   */
-
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
-  }
-
-  /**
-   * PORTFOLIO
-   */
-
-  .project-list { grid-template-columns: 1fr 1fr; }
 }
