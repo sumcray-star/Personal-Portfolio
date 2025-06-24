@@ -1010,9 +1010,9 @@ main {
 
 .skill-bubble:hover {
   background: var(--bg-gradient-yellow-1);
-  color: var(--smoky-black);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-3);
+  color: var(--white-1);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: var(--shadow-4);
 }
 
 .skill-bubble:hover::before {
