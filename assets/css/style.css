@@ -1187,22 +1187,33 @@ main {
   margin-left: 10px;
 }
 
-.project-content {
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-}
-
-.project-actions {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
-  gap: 10px;
-  margin-top: 15px;
-  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-1);
+  z-index: 2;
 }
 
-.project-link {
+.project-item>a:hover .project-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-overlay-link {
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 8px 12px;
+  padding: 10px 15px;
   border-radius: 8px;
   text-decoration: none;
   font-size: var(--fs-7);
@@ -1211,31 +1222,31 @@ main {
   cursor: pointer;
 }
 
-.project-link span {
+.project-overlay-link span {
   font-size: 12px;
 }
 
-.project-link ion-icon {
+.project-overlay-link ion-icon {
   font-size: 16px;
 }
 
-.view-link {
+.project-overlay .view-link {
   background: var(--orange-yellow-crayola);
   color: var(--smoky-black);
 }
 
-.view-link:hover {
-  background: var(--yellow-green-crayola);
+.project-overlay .view-link:hover {
+  background: var(--vegas-gold);
   transform: translateY(-2px);
 }
 
-.github-link {
+.project-overlay .github-link {
   background: var(--eerie-black-2);
   color: var(--white-2);
   border: 1px solid var(--jet);
 }
 
-.github-link:hover {
+.project-overlay .github-link:hover {
   background: var(--jet);
   color: var(--orange-yellow-crayola);
   transform: translateY(-2px);
