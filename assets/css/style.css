@@ -1187,60 +1187,6 @@ main {
   margin-left: 10px;
 }
 
-.project-content {
-  width: 100%;
-}
-
-.project-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-  margin-left: 10px;
-}
-
-.project-link {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: var(--fs-7);
-  font-weight: var(--fw-500);
-  transition: var(--transition-1);
-  cursor: pointer;
-}
-
-.project-link span {
-  font-size: 12px;
-}
-
-.project-link ion-icon {
-  font-size: 16px;
-}
-
-.view-link {
-  background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
-}
-
-.view-link:hover {
-  background: var(--yellow-green-crayola);
-  transform: translateY(-2px);
-}
-
-.github-link {
-  background: var(--eerie-black-2);
-  color: var(--white-2);
-  border: 1px solid var(--jet);
-}
-
-.github-link:hover {
-  background: var(--jet);
-  color: var(--orange-yellow-crayola);
-  transform: translateY(-2px);
-}
-
 .project-title {
   color: var(--white-2);
   font-size: var(--fs-5);
