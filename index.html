@@ -22,7 +22,6 @@
 </head>
 
 <body>
-
   <!--
     - #MAIN
   -->
@@ -184,16 +183,13 @@
         </ul>
 
       </nav>
-
-
-
-
+      
 
       <!--
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about active" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -949,22 +945,21 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <!-- ✅ Contact Form Starts -->
+<form id="contact-form" class="form" data-form>
+  <div class="input-wrapper">
+    <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+    <input type="email" name="email" class="form-input" placeholder="Email address" required>
+  </div>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+  <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
+  <button class="form-btn" type="submit">
+    <ion-icon name="paper-plane"></ion-icon>
+    <span>Send Message</span>
+  </button>
+</form>
+<!-- ✅ Contact Form Ends -->
 
         </section>
 
@@ -973,11 +968,6 @@
     </div>
 
   </main>
-
-
-
-
-
 
   <!--
     - custom js link
@@ -989,6 +979,28 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+<!-- ✅ Load SDK v4 -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- ✅ EmailJS Contact Form Script -->
+<script>
+  emailjs.init("Vf9yG_BeF2Tp5dwAZ"); // ← Replace with your real EmailJS public key
+
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_a5yuszd", "template_gccl1i7", this)
+      .then(() => { 
+        alert("Message sent successfully!");
+        this.reset();
+      }, (error) => {
+        alert("Failed to send message.");
+        console.error("EmailJS Error:", error);
+      });
+  });
+</script>
 
 </body>
 
